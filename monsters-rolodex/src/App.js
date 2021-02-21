@@ -6,7 +6,7 @@ class App extends Component{
   constructor(){
     super();
     this.state ={
-      string:'Hello Helder'
+      string:'Hello Helder Pereira'
     }
   }
   render(){
@@ -17,7 +17,7 @@ class App extends Component{
           <p>
            {this.state.string}
           </p>
-         <button>change text</button>
+         <button onClick={()=>{this.setState({string:'Ola Helder'})}}>change text</button>
         </header>
       </div>
     );
