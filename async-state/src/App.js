@@ -5,22 +5,24 @@ import './App.css';
 
 
 
-class App extends React.Component  {
-  constructor(){
+class App extends React.Component {
+  constructor() {
     super();
-    this.state={
-      meaningOfLife : 47
+    this.state = {
+      meaningOfLife: 47
     }
   }
 
   handleClick = () => {
-    this.setState({meaningOfLife : this.state.meaningOfLife+1}, 
-      ()=> console.log(this.state.meaningOfLife));
-    
-  }
-  
+    this.setState((prevState, prevProps) => {
+      return { meaningOfLife: prevState.meaningOfLife + 1 }
+    },
+      () => console.log(this.state.meaningOfLife));
 
-  render(){
+  }
+
+
+  render() {
     return (
       <div className="App">
         <header className="App-header">
@@ -29,7 +31,7 @@ class App extends React.Component  {
             {this.state.meaningOfLife}
           </p>
           <button
-           onClick= {this.handleClick}
+            onClick={this.handleClick}
           >
             update state
           </button>
@@ -37,7 +39,7 @@ class App extends React.Component  {
       </div>
     );
   }
- 
+
 }
 
 export default App;
