@@ -18,7 +18,7 @@ class App extends React.Component {
       return { meaningOfLife: prevState.meaningOfLife + 1 }
     },
       () => console.log(this.state.meaningOfLife)); 
-  }
+  };
 
 
 
