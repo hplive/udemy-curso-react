@@ -17,7 +17,7 @@ class App extends React.Component {
     this.setState((prevState, prevProps) => {
       return { meaningOfLife: prevState.meaningOfLife + 1 }
     },
-      () => console.log(this.state.meaningOfLife));
+      () => console.log(this.state.meaningOfLife)); 
 
   }
 
